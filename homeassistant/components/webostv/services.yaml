@@ -34,6 +34,20 @@ command:
       selector:
         object:
 
+input_command:
+  fields:
+    entity_id:
+      required: true
+      selector:
+        entity:
+          integration: webostv
+          domain: media_player
+    command:
+      required: true
+      example: "type:move\ndx:5\ndy:5\ndown:0\n\n"
+      selector:
+        text:
+
 select_sound_output:
   fields:
     entity_id:
