@@ -84,6 +84,20 @@
         }
       }
     },
+    "input_command": {
+      "name": "Input Command",
+      "description": "Sends an input command.",
+      "fields": {
+        "entity_id": {
+          "name": "Entity",
+          "description": "[%key:component::webostv::services::button::fields::entity_id::description%]"
+        },
+        "command": {
+          "name": "Command",
+          "description": "Message of the command."
+        }
+      }
+    },
     "select_sound_output": {
       "name": "Select sound output",
       "description": "Sends the TV the command to change sound output.",
