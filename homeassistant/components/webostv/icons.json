@@ -6,6 +6,9 @@
     "command": {
       "service": "mdi:console"
     },
+    "input_command": {
+      "service": "mdi:cursor-pointer"
+    },
     "select_sound_output": {
       "service": "mdi:volume-source"
     }
