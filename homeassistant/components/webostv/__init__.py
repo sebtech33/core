@@ -36,6 +36,7 @@ from .const import (
     PLATFORMS,
     SERVICE_BUTTON,
     SERVICE_COMMAND,
+    SERVICE_INPUT_COMMAND,
     SERVICE_SELECT_SOUND_OUTPUT,
     WEBOSTV_EXCEPTIONS,
 )
@@ -58,12 +59,17 @@ COMMAND_SCHEMA = CALL_SCHEMA.extend(
     {vol.Required(ATTR_COMMAND): cv.string, vol.Optional(ATTR_PAYLOAD): dict}
 )
 
+INPUT_COMMAND_SCHEMA = CALL_SCHEMA.extend({vol.Required(ATTR_COMMAND): cv.string})
+
 SOUND_OUTPUT_SCHEMA = CALL_SCHEMA.extend({vol.Required(ATTR_SOUND_OUTPUT): cv.string})
 
 SERVICE_TO_METHOD = {
     SERVICE_BUTTON: ServiceMethodDetails(method="async_button", schema=BUTTON_SCHEMA),
     SERVICE_COMMAND: ServiceMethodDetails(
         method="async_command", schema=COMMAND_SCHEMA
+    ),
+    SERVICE_INPUT_COMMAND: ServiceMethodDetails(
+        method="async_input_command", schema=INPUT_COMMAND_SCHEMA
     ),
     SERVICE_SELECT_SOUND_OUTPUT: ServiceMethodDetails(
         method="async_select_sound_output",
