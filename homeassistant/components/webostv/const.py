@@ -23,6 +23,7 @@ CONF_SOURCES = "sources"
 
 SERVICE_BUTTON = "button"
 SERVICE_COMMAND = "command"
+SERVICE_INPUT_COMMAND = "input_command"
 SERVICE_SELECT_SOUND_OUTPUT = "select_sound_output"
 
 LIVE_TV_APP_ID = "com.webos.app.livetv"
