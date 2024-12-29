@@ -477,6 +477,11 @@ class LgWebOSMediaPlayerEntity(RestoreEntity, MediaPlayerEntity):
         """Send a command."""
         await self._client.request(command, payload=kwargs.get(ATTR_PAYLOAD))
 
+    @cmd
+    async def async_input_command(self, command: str) -> None:
+        """Send an input command."""
+        await self._client.input_command(command)
+
     async def _async_fetch_image(self, url: str) -> tuple[bytes | None, str | None]:
         """Retrieve an image.
 
